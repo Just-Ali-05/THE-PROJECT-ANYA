@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root:root {
+  --sidebar-width: 250px;
+  --bg-dark: #0a1628;
+  --bg-darker: #050b14;
+  --accent: #3a506b;
+  --text-light: #e0e6ed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--bg-darker);
+  border-right: 1px solid #1a2639;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  z-index: 100;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.app-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid #1a2639;
+  color: #8ca3c4;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-color: #3a506b;
+}
+
+.nav-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: #5b7391;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-footer {
+  font-size: 0.8rem;
+  color: #4a5e75;
+  text-align: center;
+  margin-top: auto;
+}
+
+.app-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.play-mode {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(5px);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.play-overlay h2 {
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.edit-this-map-btn {
+  pointer-events: auto;
+  background: #3a8a8a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.edit-this-map-btn:hover {
+  background: #4cafe5;
+}
+
+.map-editor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a2a4a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a506b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c7a99;
+}
+
+::selection {
+  background: #c9a227;
+  color: #0a1628;
+}
