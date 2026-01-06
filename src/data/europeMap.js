@@ -17,8 +17,7 @@ export const europeMapData = [
   { q: -11, r: 0, terrain: "plains", country: "United Kingdom" },
   { q: -11, r: 1, terrain: "capital", country: "United Kingdom" },
   { q: -11, r: 2, terrain: "plains", country: "United Kingdom" },
-  { q: -10, r: 1, terrain: "sea", country: null },
-  { q: -10, r: 2, terrain: "sea", country: null },
+  { q: -10, r: 2, terrain: "plains", country: "United Kingdom" },
 
   { q: -14, r: -1, terrain: "sea", country: null },
   { q: -13, r: 1, terrain: "plains", country: "Ireland" },
